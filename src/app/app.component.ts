@@ -10,7 +10,6 @@ import { filter, map } from 'rxjs/operators';
 export class AppComponent {
   title = 'teste';
   lista: any[] = [];
-  lista2: any[] = [];
 
   diario = [
     {
@@ -655,10 +654,10 @@ ngOnInit(): void{
     mergeMap(group => group.pipe(toArray()))
     ).subscribe((item) => {
       this.lista.push(item);
-      this.lista2.push(item[0]);
+
     });
 
-    console.log(this.lista[0]);
+    console.log(this.lista.keys());
 
   }
 

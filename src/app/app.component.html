@@ -1,8 +1,8 @@
 <ul>
-  <li *ngFor="let item of lista">
-    {{item[0].GRUPO}}
-    <ul *ngFor="let item2 of lista2">
-      <li>{{item2.DISCIPLINA}}</li>
+  <li *ngFor="let item of lista; let i = index">
+    {{item[0].GRUPO}} - {{i}}
+    <ul *ngFor="let item2 of item">
+      <li>{{item2.SERIE}}</li>
     </ul>
   </li>
 
